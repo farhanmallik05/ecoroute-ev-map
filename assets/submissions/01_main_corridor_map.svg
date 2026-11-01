@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#020617;font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bgGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="routeGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Map Background -->
+  <rect width="1200" height="675" fill="url(#bgGlow)" />
+  
+  <!-- Subtle Map Grid & Contour Lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="135" x2="1200" y2="135" stroke-dasharray="4 4" />
+    <line x1="0" y1="270" x2="1200" y2="270" stroke-dasharray="4 4" />
+    <line x1="0" y1="405" x2="1200" y2="405" stroke-dasharray="4 4" />
+    <line x1="0" y1="540" x2="1200" y2="540" stroke-dasharray="4 4" />
+    <line x1="240" y1="0" x2="240" y2="675" stroke-dasharray="4 4" />
+    <line x1="480" y1="0" x2="480" y2="675" stroke-dasharray="4 4" />
+    <line x1="720" y1="0" x2="720" y2="675" stroke-dasharray="4 4" />
+    <line x1="960" y1="0" x2="960" y2="675" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Highway Route Corridor Glow & Polyline -->
+  <path d="M 280 460 Q 420 380, 580 340 T 780 260 T 920 180" fill="none" stroke="#10b981" stroke-width="20" stroke-linecap="round" opacity="0.25" />
+  <path d="M 280 460 Q 420 380, 580 340 T 780 260 T 920 180" fill="none" stroke="url(#routeGlow)" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Isochrone Range Polygon -->
+  <circle cx="280" cy="460" r="160" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6 4" />
+
+  <!-- Clustered EV Station Nodes -->
+  <g filter="url(#shadow)">
+    <!-- San Francisco Cluster -->
+    <circle cx="280" cy="460" r="26" fill="#059669" stroke="#ffffff" stroke-width="3" />
+    <text x="280" y="466" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">16</text>
+    <text x="280" y="502" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">San Francisco Hub</text>
+
+    <!-- Sacramento Central Cluster -->
+    <circle cx="580" cy="340" r="22" fill="#0284c7" stroke="#ffffff" stroke-width="2.5" />
+    <text x="580" y="345" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">10</text>
+    <text x="580" y="376" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Sacramento Clean Plaza</text>
+
+    <!-- Tahoe Mountain Destination -->
+    <circle cx="920" cy="180" r="24" fill="#f59e0b" stroke="#ffffff" stroke-width="3" />
+    <text x="920" y="186" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">8</text>
+    <text x="920" y="218" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">Lake Tahoe (Heavenly)</text>
+
+    <!-- Midpoint Fast Chargers along Corridor -->
+    <circle cx="440" cy="390" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+    <circle cx="720" cy="290" r="12" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+    <circle cx="820" cy="230" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+  </g>
+
+  <!-- Top Navbar Header Overlay -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="30" width="1120" height="64" rx="20" fill="#0f172a" fill-opacity="0.95" stroke="#1e293b" />
+    
+    <!-- Logo & Brand -->
+    <rect x="56" y="42" width="40" height="40" rx="12" fill="#10b981" />
+    <path d="M 76 48 L 68 64 L 75 64 L 74 76 L 84 58 L 77 58 Z" fill="#ffffff" />
+    <text x="108" y="62" fill="#ffffff" font-size="18" font-weight="bold">EcoRoute</text>
+    <rect x="195" y="49" width="105" height="20" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" />
+    <text x="247" y="63" fill="#34d399" font-size="10" font-weight="bold" text-anchor="middle">AWS LOCATION</text>
+    <text x="108" y="78" fill="#94a3b8" font-size="11">Clean Energy &amp; EV Grid Navigator</text>
+
+    <!-- Search Box Mockup -->
+    <rect x="420" y="44" width="340" height="36" rx="12" fill="#1e293b" stroke="#334155" />
+    <text x="440" y="67" fill="#cbd5e1" font-size="12">🔍 Search Lake Tahoe, San Francisco, I-5...</text>
+
+    <!-- Stats Pills -->
+    <rect x="880" y="44" width="130" height="36" rx="12" fill="#10b981" />
+    <text x="945" y="67" fill="#022c22" font-size="12" font-weight="bold" text-anchor="middle">⚡ Route Active</text>
+
+    <rect x="1025" y="44" width="115" height="36" rx="12" fill="#1e293b" stroke="#334155" />
+    <text x="1082" y="67" fill="#f8fafc" font-size="12" font-weight="600" text-anchor="middle">⚙️ Filters</text>
+  </g>
+
+  <!-- Floating Trip Analytics HUD (Bottom Left) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="520" width="460" height="115" rx="20" fill="#0f172a" fill-opacity="0.95" stroke="#1e293b" />
+    <text x="60" y="548" fill="#34d399" font-size="11" font-weight="bold" letter-spacing="1">LIVE CORRIDOR TELEMETRY</text>
+    
+    <text x="60" y="582" fill="#ffffff" font-size="22" font-weight="extrabold">198 mi</text>
+    <text x="60" y="602" fill="#94a3b8" font-size="11">Total Distance</text>
+
+    <text x="180" y="582" fill="#ffffff" font-size="22" font-weight="extrabold">3h 05m</text>
+    <text x="180" y="602" fill="#94a3b8" font-size="11">Drive Duration</text>
+
+    <text x="310" y="582" fill="#34d399" font-size="22" font-weight="extrabold">155 lbs</text>
+    <text x="310" y="602" fill="#94a3b8" font-size="11">CO₂ Avoided</text>
+
+    <rect x="410" y="540" width="75" height="75" rx="14" fill="#064e3b" fill-opacity="0.4" stroke="#10b981" stroke-width="1.5" />
+    <text x="447" y="572" fill="#34d399" font-size="18" font-weight="extrabold" text-anchor="middle">94%</text>
+    <text x="447" y="595" fill="#a7f3d0" font-size="9" font-weight="bold" text-anchor="middle">CLEAN GRID</text>
+  </g>
+
+  <!-- Elevation HUD (Bottom Right) -->
+  <g filter="url(#shadow)">
+    <rect x="800" y="520" width="360" height="115" rx="20" fill="#0f172a" fill-opacity="0.95" stroke="#1e293b" />
+    <text x="820" y="548" fill="#38bdf8" font-size="11" font-weight="bold" letter-spacing="1">SIERRA ELEVATION PROFILE</text>
+    
+    <!-- Mini Elevation Curve -->
+    <path d="M 820 605 Q 920 600, 990 580 T 1090 550 L 1140 565" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <text x="820" y="620" fill="#64748b" font-size="10">Sea Level (SF)</text>
+    <text x="1110" y="620" fill="#38bdf8" font-size="10" font-weight="bold">Echo Summit 7,382 ft</text>
+  </g>
+</svg>
+

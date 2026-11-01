@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="1100" height="620" style="background:#020617;font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="620" fill="#020617" />
+
+  <!-- Header -->
+  <g transform="translate(60, 40)">
+    <text x="0" y="24" fill="#ffffff" font-size="22" font-weight="extrabold">EcoRoute Cloud Architecture</text>
+    <text x="0" y="48" fill="#94a3b8" font-size="13">Amazon Location Service Vector Streaming, Cognito Auth &amp; Serverless Spatial Buffering</text>
+  </g>
+
+  <!-- Tier 1: Client Browser -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    <rect x="0" y="0" width="260" height="440" rx="24" fill="url(#cardBg)" stroke="#1e293b" />
+    <rect x="20" y="20" width="100" height="24" rx="8" fill="#10b981" fill-opacity="0.15" />
+    <text x="70" y="36" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">CLIENT TIER</text>
+    <text x="20" y="70" fill="#ffffff" font-size="16" font-weight="bold">React 18 + Vite SPA</text>
+    <text x="20" y="90" fill="#94a3b8" font-size="11">MapLibre GL JS (WebGL Engine)</text>
+
+    <rect x="20" y="115" width="220" height="65" rx="14" fill="#1e293b" stroke="#334155" />
+    <text x="35" y="140" fill="#ffffff" font-size="12" font-weight="bold">MapLibre Canvas</text>
+    <text x="35" y="160" fill="#94a3b8" font-size="10">60 FPS dynamic clustering</text>
+
+    <rect x="20" y="195" width="220" height="65" rx="14" fill="#1e293b" stroke="#334155" />
+    <text x="35" y="220" fill="#ffffff" font-size="12" font-weight="bold">Turf.js Spatial Math</text>
+    <text x="35" y="240" fill="#94a3b8" font-size="10">Corridor line buffer &amp; isochrones</text>
+
+    <rect x="20" y="275" width="220" height="65" rx="14" fill="#1e293b" stroke="#334155" />
+    <text x="35" y="300" fill="#ffffff" font-size="12" font-weight="bold">Elevation Engine</text>
+    <text x="35" y="320" fill="#94a3b8" font-size="10">Battery drain &amp; regen curve</text>
+
+    <rect x="20" y="355" width="220" height="65" rx="14" fill="#1e293b" stroke="#334155" />
+    <text x="35" y="380" fill="#ffffff" font-size="12" font-weight="bold">AWS SDK v3 Client</text>
+    <text x="35" y="400" fill="#94a3b8" font-size="10">SigV4 Request signing</text>
+  </g>
+
+  <!-- Connectors from Client to Edge & Security -->
+  <path d="M 320 220 L 400 220" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 4" />
+  <text x="360" y="210" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">Auth</text>
+
+  <path d="M 320 380 L 400 380" stroke="#06b6d4" stroke-width="2.5" />
+  <text x="360" y="370" fill="#06b6d4" font-size="10" font-weight="bold" text-anchor="middle">Tiles / Routes</text>
+
+  <!-- Tier 2: Security & Edge -->
+  <g transform="translate(400, 110)" filter="url(#shadow)">
+    <rect x="0" y="0" width="280" height="440" rx="24" fill="url(#cardBg)" stroke="#1e293b" />
+    <rect x="20" y="20" width="130" height="24" rx="8" fill="#38bdf8" fill-opacity="0.15" />
+    <text x="85" y="36" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">EDGE &amp; SECURITY</text>
+
+    <!-- Cognito Pool -->
+    <rect x="20" y="65" width="240" height="105" rx="16" fill="#1e293b" stroke="#0284c7" />
+    <text x="35" y="92" fill="#38bdf8" font-size="13" font-weight="bold">Amazon Cognito</text>
+    <text x="35" y="110" fill="#ffffff" font-size="11">Identity Pool (Unauth Role)</text>
+    <text x="35" y="130" fill="#94a3b8" font-size="10">• Temporary credentials delivery</text>
+    <text x="35" y="148" fill="#94a3b8" font-size="10">• Scoped read-only IAM policy</text>
+
+    <!-- Amplify Hosting -->
+    <rect x="20" y="185" width="240" height="105" rx="16" fill="#1e293b" stroke="#334155" />
+    <text x="35" y="212" fill="#ffffff" font-size="13" font-weight="bold">AWS Amplify Hosting</text>
+    <text x="35" y="230" fill="#94a3b8" font-size="11">Global CloudFront Edge Network</text>
+    <text x="35" y="250" fill="#94a3b8" font-size="10">• Automated GitHub CI/CD</text>
+    <text x="35" y="268" fill="#94a3b8" font-size="10">• ACM SSL/TLS HSTS</text>
+
+    <!-- S3 Open Data -->
+    <rect x="20" y="305" width="240" height="105" rx="16" fill="#1e293b" stroke="#334155" />
+    <text x="35" y="332" fill="#ffffff" font-size="13" font-weight="bold">Amazon S3 Open Data</text>
+    <text x="35" y="350" fill="#94a3b8" font-size="11">Pre-cached GeoJSON FeatureSets</text>
+    <text x="35" y="370" fill="#94a3b8" font-size="10">• 45,000+ EV charging stations</text>
+    <text x="35" y="388" fill="#94a3b8" font-size="10">• NREL AFDC &amp; OpenCharge</text>
+  </g>
+
+  <!-- Connectors from Edge to AWS Services -->
+  <path d="M 680 290 L 760 290" stroke="#10b981" stroke-width="2.5" />
+
+  <!-- Tier 3: Amazon Location Service -->
+  <g transform="translate(760, 110)" filter="url(#shadow)">
+    <rect x="0" y="0" width="280" height="440" rx="24" fill="url(#cardBg)" stroke="#064e3b" stroke-width="1.5" />
+    <rect x="20" y="20" width="165" height="24" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="102" y="36" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">AMAZON LOCATION CORE</text>
+
+    <!-- Maps -->
+    <rect x="20" y="65" width="240" height="105" rx="16" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <text x="35" y="92" fill="#34d399" font-size="14" font-weight="bold">Maps Service</text>
+    <text x="35" y="112" fill="#ffffff" font-size="11">VectorEsriNavigation Style</text>
+    <text x="35" y="132" fill="#94a3b8" font-size="10">• Vector tiles, sprites &amp; glyphs</text>
+    <text x="35" y="150" fill="#94a3b8" font-size="10">• High contrast road geometry</text>
+
+    <!-- Places -->
+    <rect x="20" y="185" width="240" height="105" rx="16" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <text x="35" y="212" fill="#34d399" font-size="14" font-weight="bold">Place Index</text>
+    <text x="35" y="232" fill="#ffffff" font-size="11">Geocoding &amp; Autocomplete</text>
+    <text x="35" y="252" fill="#94a3b8" font-size="10">• Sub-second address search</text>
+    <text x="35" y="270" fill="#94a3b8" font-size="10">• Reverse geocoding lat/lon</text>
+
+    <!-- Routes -->
+    <rect x="20" y="305" width="240" height="105" rx="16" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <text x="35" y="332" fill="#34d399" font-size="14" font-weight="bold">Route Calculator</text>
+    <text x="35" y="352" fill="#ffffff" font-size="11">Turn-by-turn Navigation</text>
+    <text x="35" y="372" fill="#94a3b8" font-size="10">• Highway waypoint routing</text>
+    <text x="35" y="390" fill="#94a3b8" font-size="10">• Driving matrix &amp; duration</text>
+  </g>
+</svg>
+

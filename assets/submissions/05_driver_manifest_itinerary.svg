@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" style="background:#020617;font-family:system-ui,-apple-system,sans-serif">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="620" fill="#020617" />
+
+  <!-- Dialog Box -->
+  <g transform="translate(75, 40)" filter="url(#shadow)">
+    <rect x="0" y="0" width="750" height="540" rx="24" fill="#0f172a" stroke="#1e293b" />
+
+    <!-- Header -->
+    <text x="35" y="45" fill="#ffffff" font-size="20" font-weight="bold">EcoRoute Driver Manifest &amp; Charging Schedule</text>
+    <text x="35" y="70" fill="#94a3b8" font-size="12">San Francisco Civic Center → South Lake Tahoe Alpine Hub (198 miles)</text>
+
+    <!-- Top KPI cards -->
+    <g transform="translate(35, 95)">
+      <rect x="0" y="0" width="155" height="65" rx="14" fill="#1e293b" />
+      <text x="77" y="26" fill="#94a3b8" font-size="11" text-anchor="middle">DISTANCE</text>
+      <text x="77" y="50" fill="#ffffff" font-size="18" font-weight="extrabold" text-anchor="middle">198 mi</text>
+
+      <rect x="175" y="0" width="155" height="65" rx="14" fill="#1e293b" />
+      <text x="252" y="26" fill="#94a3b8" font-size="11" text-anchor="middle">EST. DRIVE TIME</text>
+      <text x="252" y="50" fill="#ffffff" font-size="18" font-weight="extrabold" text-anchor="middle">3h 05m</text>
+
+      <rect x="350" y="0" width="155" height="65" rx="14" fill="#064e3b" />
+      <text x="427" y="26" fill="#a7f3d0" font-size="11" text-anchor="middle">CO₂ AVOIDED</text>
+      <text x="427" y="50" fill="#34d399" font-size="18" font-weight="extrabold" text-anchor="middle">155.6 lbs</text>
+
+      <rect x="525" y="0" width="155" height="65" rx="14" fill="#1e293b" />
+      <text x="602" y="26" fill="#94a3b8" font-size="11" text-anchor="middle">GAS SAVED</text>
+      <text x="602" y="50" fill="#38bdf8" font-size="18" font-weight="extrabold" text-anchor="middle">7.9 gal</text>
+    </g>
+
+    <!-- Stepped Schedule -->
+    <g transform="translate(35, 185)">
+      <!-- Step 1: Origin -->
+      <circle cx="20" cy="20" r="16" fill="#10b981" />
+      <text x="20" y="25" fill="#022c22" font-size="12" font-weight="bold" text-anchor="middle">A</text>
+      <text x="50" y="18" fill="#ffffff" font-size="14" font-weight="bold">Departure: San Francisco Civic Center</text>
+      <text x="50" y="35" fill="#94a3b8" font-size="11">State of Charge: 90% (69.3 kWh) • I-80 East Corridor</text>
+
+      <line x1="20" y1="42" x2="20" y2="90" stroke="#334155" stroke-width="2" stroke-dasharray="4 4" />
+
+      <!-- Step 2: Midpoint Pitstop -->
+      <circle cx="20" cy="115" r="16" fill="#0284c7" />
+      <text x="20" y="120" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">⚡</text>
+      <text x="50" y="112" fill="#38bdf8" font-size="14" font-weight="bold">Recommended Stop: Sacramento Capitol Clean Grid Plaza</text>
+      <text x="50" y="130" fill="#cbd5e1" font-size="11">Mile 88 • 350 kW Electrify America • 5/10 stalls free • 95% Clean Solar</text>
+      <text x="50" y="148" fill="#10b981" font-size="11" font-weight="semibold">Dwell Time: 20 min charge (Charges 40% → 85% SoC) • Coffee &amp; Restrooms</text>
+
+      <line x1="20" y1="160" x2="20" y2="205" stroke="#334155" stroke-width="2" stroke-dasharray="4 4" />
+
+      <!-- Step 3: Mountain Climb -->
+      <circle cx="20" cy="225" r="16" fill="#f59e0b" />
+      <text x="20" y="230" fill="#451a03" font-size="12" font-weight="bold" text-anchor="middle">▲</text>
+      <text x="50" y="222" fill="#ffffff" font-size="14" font-weight="bold">Ascent: Echo Summit Pass (Elevation: 7,382 ft)</text>
+      <text x="50" y="240" fill="#94a3b8" font-size="11">Mile 175 • +7,420 ft climb • 6.2 kWh regen braking energy recovered on descent</text>
+
+      <line x1="20" y1="252" x2="20" y2="285" stroke="#334155" stroke-width="2" stroke-dasharray="4 4" />
+
+      <!-- Step 4: Destination -->
+      <circle cx="20" cy="305" r="16" fill="#10b981" />
+      <text x="20" y="310" fill="#022c22" font-size="12" font-weight="bold" text-anchor="middle">B</text>
+      <text x="50" y="302" fill="#ffffff" font-size="14" font-weight="bold">Arrival: South Lake Tahoe Alpine Hub</text>
+      <text x="50" y="320" fill="#34d399" font-size="11" font-weight="bold">Final Battery Remaining: 42% SoC • Trip Goal Accomplished</text>
+    </g>
+
+    <!-- Bottom Buttons -->
+    <g transform="translate(35, 470)">
+      <rect x="0" y="0" width="320" height="42" rx="12" fill="#10b981" />
+      <text x="160" y="26" fill="#022c22" font-size="13" font-weight="bold" text-anchor="middle">📄 Export Itinerary to JSON / Navigation</text>
+
+      <rect x="340" y="0" width="180" height="42" rx="12" fill="#1e293b" stroke="#334155" />
+      <text x="430" y="26" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">📋 Copy to Clipboard</text>
+    </g>
+  </g>
+</svg>
+
