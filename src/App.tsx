@@ -12,6 +12,7 @@ import { ItineraryModal } from './components/ItineraryModal';
 import { VehicleSelector } from './components/VehicleSelector';
 import { SavedRoutesModal } from './components/SavedRoutesModal';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { INITIAL_STATIONS } from './data/stationsData';
 
 const initialFilters: FilterState = {
   minPowerKw: 50,
@@ -22,7 +23,7 @@ const initialFilters: FilterState = {
 };
 
 export const AppContent: React.FC = () => {
-  const [allStations, setAllStations] = useState<EVStationFeature[]>([]);
+  const [allStations, setAllStations] = useState<EVStationFeature[]>(INITIAL_STATIONS.features);
   const [selectedStation, setSelectedStation] = useState<EVStationFeature | null>(null);
   const [isFiltersOpen, setIsFiltersOpen] = useState<boolean>(false);
   const [isRoutePlannerOpen, setIsRoutePlannerOpen] = useState<boolean>(false);
@@ -36,19 +37,22 @@ export const AppContent: React.FC = () => {
   const [flyToCoords, setFlyToCoords] = useState<[number, number] | null>(null);
   const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [activeRoute, setActiveRoute] = useState<RouteResult | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  // Fetch GeoJSON station data
+  // Fetch GeoJSON station data (with instant fallback to bundled stations)
   useEffect(() => {
     fetch('/data/ev_stations.geojson')
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
       .then((data: EVStationCollection) => {
-        setAllStations(data.features || []);
-        setLoading(false);
+        if (data && data.features && data.features.length > 0) {
+          setAllStations(data.features);
+        }
       })
       .catch((err) => {
-        console.error('Failed to load EV stations:', err);
-        setLoading(false);
+        console.warn('Using bundled EV stations dataset:', err);
       });
   }, []);
 

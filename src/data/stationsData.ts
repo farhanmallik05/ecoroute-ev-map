@@ -1,0 +1,409 @@
+import { EVStationCollection } from '../types';
+
+export const INITIAL_STATIONS: EVStationCollection = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-122.4194, 37.7749] },
+      "properties": {
+        "id": "ev-sf-01",
+        "name": "San Francisco Civic Center Supercharger",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 16,
+        "ports_available": 9,
+        "connectors": ["NACS", "CCS"],
+        "address": "355 McAllister St",
+        "city": "San Francisco",
+        "state": "CA",
+        "pricing": "$0.38/kWh",
+        "renewable_pct": 94,
+        "amenities": ["Restrooms", "Coffee", "Wi-Fi"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-122.4008, 37.7885] },
+      "properties": {
+        "id": "ev-sf-02",
+        "name": "Financial District Clean Fast Hub",
+        "operator": "Electrify America",
+        "level": "DC_FAST",
+        "power_kw": 350,
+        "ports_total": 8,
+        "ports_available": 3,
+        "connectors": ["CCS", "CHAdeMO"],
+        "address": "250 Bush St",
+        "city": "San Francisco",
+        "state": "CA",
+        "pricing": "$0.44/kWh",
+        "renewable_pct": 98,
+        "amenities": ["Dining", "Coffee"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-122.2711, 37.8044] },
+      "properties": {
+        "id": "ev-oak-01",
+        "name": "Oakland Downtown Express Charging",
+        "operator": "EVgo",
+        "level": "DC_FAST",
+        "power_kw": 150,
+        "ports_total": 6,
+        "ports_available": 4,
+        "connectors": ["CCS", "NACS"],
+        "address": "1200 Clay St",
+        "city": "Oakland",
+        "state": "CA",
+        "pricing": "$0.39/kWh",
+        "renewable_pct": 89,
+        "amenities": ["Wi-Fi", "Restrooms"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-122.1430, 37.4419] },
+      "properties": {
+        "id": "ev-pa-01",
+        "name": "Palo Alto Stanford Solar Fast Charger",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 24,
+        "ports_available": 14,
+        "connectors": ["NACS"],
+        "address": "2825 Sand Hill Rd",
+        "city": "Palo Alto",
+        "state": "CA",
+        "pricing": "$0.34/kWh",
+        "renewable_pct": 100,
+        "amenities": ["Dining", "Restrooms", "Scenic Views"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.8863, 37.3382] },
+      "properties": {
+        "id": "ev-sj-01",
+        "name": "San Jose Innovation Station",
+        "operator": "Electrify America",
+        "level": "DC_FAST",
+        "power_kw": 350,
+        "ports_total": 12,
+        "ports_available": 7,
+        "connectors": ["CCS", "NACS"],
+        "address": "90 S 1st St",
+        "city": "San Jose",
+        "state": "CA",
+        "pricing": "$0.42/kWh",
+        "renewable_pct": 92,
+        "amenities": ["Shopping", "Dining", "Coffee"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.7580, 37.7699] },
+      "properties": {
+        "id": "ev-liv-01",
+        "name": "Livermore Outlets Ultra-Fast Gateway",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 32,
+        "ports_available": 19,
+        "connectors": ["NACS"],
+        "address": "2774 Livermore Outlets Dr",
+        "city": "Livermore",
+        "state": "CA",
+        "pricing": "$0.32/kWh",
+        "renewable_pct": 87,
+        "amenities": ["Shopping", "Dining", "Restrooms"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.4252, 37.7397] },
+      "properties": {
+        "id": "ev-tracy-01",
+        "name": "Tracy Central Valley Connector",
+        "operator": "ChargePoint",
+        "level": "DC_FAST",
+        "power_kw": 125,
+        "ports_total": 4,
+        "ports_available": 2,
+        "connectors": ["CCS", "J1772"],
+        "address": "1005 N Tracy Blvd",
+        "city": "Tracy",
+        "state": "CA",
+        "pricing": "$0.35/kWh",
+        "renewable_pct": 78,
+        "amenities": ["Restrooms", "Fast Food"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.2908, 37.9577] },
+      "properties": {
+        "id": "ev-stk-01",
+        "name": "Stockton Delta Supercharging Plaza",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 16,
+        "ports_available": 11,
+        "connectors": ["NACS"],
+        "address": "4725 Pacific Ave",
+        "city": "Stockton",
+        "state": "CA",
+        "pricing": "$0.31/kWh",
+        "renewable_pct": 81,
+        "amenities": ["Dining", "Coffee"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.4944, 38.5816] },
+      "properties": {
+        "id": "ev-sac-01",
+        "name": "Sacramento Capitol Clean Grid Plaza",
+        "operator": "Electrify America",
+        "level": "DC_FAST",
+        "power_kw": 350,
+        "ports_total": 10,
+        "ports_available": 5,
+        "connectors": ["CCS", "NACS", "CHAdeMO"],
+        "address": "1500 K St",
+        "city": "Sacramento",
+        "state": "CA",
+        "pricing": "$0.40/kWh",
+        "renewable_pct": 95,
+        "amenities": ["Restrooms", "Museum", "Dining"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.2828, 38.7521] },
+      "properties": {
+        "id": "ev-rv-01",
+        "name": "Roseville Foothills Charging Hub",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 20,
+        "ports_available": 12,
+        "connectors": ["NACS"],
+        "address": "1151 Galleria Blvd",
+        "city": "Roseville",
+        "state": "CA",
+        "pricing": "$0.33/kWh",
+        "renewable_pct": 91,
+        "amenities": ["Shopping", "Dining", "Wi-Fi"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-121.0769, 38.8966] },
+      "properties": {
+        "id": "ev-aub-01",
+        "name": "Auburn Sierra Gateway Fast Charge",
+        "operator": "Rivian Adventure Network",
+        "level": "DC_FAST",
+        "power_kw": 300,
+        "ports_total": 6,
+        "ports_available": 4,
+        "connectors": ["CCS", "NACS"],
+        "address": "250 Elm Ave",
+        "city": "Auburn",
+        "state": "CA",
+        "pricing": "$0.37/kWh",
+        "renewable_pct": 89,
+        "amenities": ["Coffee", "Hiking Trails", "Restrooms"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.7988, 39.1888] },
+      "properties": {
+        "id": "ev-colfax-01",
+        "name": "Colfax Mountain Pass Quick Charge",
+        "operator": "ChargePoint",
+        "level": "DC_FAST",
+        "power_kw": 62.5,
+        "ports_total": 2,
+        "ports_available": 1,
+        "connectors": ["CCS", "J1772"],
+        "address": "500 S Auburn St",
+        "city": "Colfax",
+        "state": "CA",
+        "pricing": "$0.35/kWh",
+        "renewable_pct": 86,
+        "amenities": ["General Store", "Restrooms"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.1833, 39.3279] },
+      "properties": {
+        "id": "ev-truckee-01",
+        "name": "Truckee Donner Pass Supercharger Hub",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 24,
+        "ports_available": 15,
+        "connectors": ["NACS"],
+        "address": "11290 Donner Pass Rd",
+        "city": "Truckee",
+        "state": "CA",
+        "pricing": "$0.39/kWh",
+        "renewable_pct": 96,
+        "amenities": ["Grocery", "Dining", "Coffee", "Restrooms"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.0324, 38.9399] },
+      "properties": {
+        "id": "ev-tahoe-01",
+        "name": "South Lake Tahoe Alpine Clean Charge",
+        "operator": "Electrify America",
+        "level": "DC_FAST",
+        "power_kw": 350,
+        "ports_total": 8,
+        "ports_available": 5,
+        "connectors": ["CCS", "NACS"],
+        "address": "1001 Heavenly Village Way",
+        "city": "South Lake Tahoe",
+        "state": "CA",
+        "pricing": "$0.45/kWh",
+        "renewable_pct": 100,
+        "amenities": ["Ski Resort", "Dining", "Scenic Views"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.8039, 36.9880] },
+      "properties": {
+        "id": "ev-losbanos-01",
+        "name": "I-5 Los Banos Central Fast Oasis",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 40,
+        "ports_available": 26,
+        "connectors": ["NACS"],
+        "address": "2030 E Pacheco Blvd",
+        "city": "Los Banos",
+        "state": "CA",
+        "pricing": "$0.32/kWh",
+        "renewable_pct": 82,
+        "amenities": ["Restrooms", "Dining", "Fast Food"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-120.3582, 36.1397] },
+      "properties": {
+        "id": "ev-harris-01",
+        "name": "Harris Ranch Solar Mega Supercharger",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 98,
+        "ports_available": 62,
+        "connectors": ["NACS"],
+        "address": "24505 W Dorris Ave",
+        "city": "Coalinga",
+        "state": "CA",
+        "pricing": "$0.29/kWh",
+        "renewable_pct": 98,
+        "amenities": ["Restaurant", "Hotel", "Wi-Fi", "Restrooms"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-119.8138, 35.6989] },
+      "properties": {
+        "id": "ev-kettleman-01",
+        "name": "Kettleman City Luxury EV Lounge",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 55,
+        "ports_available": 34,
+        "connectors": ["NACS"],
+        "address": "27675 Bernard Dr",
+        "city": "Kettleman City",
+        "state": "CA",
+        "pricing": "$0.34/kWh",
+        "renewable_pct": 95,
+        "amenities": ["Private Lounge", "Barista", "Fast Wi-Fi", "Kids Area"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-118.9137, 35.0069] },
+      "properties": {
+        "id": "ev-tejon-01",
+        "name": "Tejon Pass Mountain Base Plaza",
+        "operator": "Electrify America",
+        "level": "DC_FAST",
+        "power_kw": 350,
+        "ports_total": 14,
+        "ports_available": 8,
+        "connectors": ["CCS", "NACS"],
+        "address": "5602 Dennis McCarthy Dr",
+        "city": "Lebec",
+        "state": "CA",
+        "pricing": "$0.41/kWh",
+        "renewable_pct": 88,
+        "amenities": ["Outlets", "Dining", "Fuel & Snacks"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-118.2437, 34.0522] },
+      "properties": {
+        "id": "ev-la-01",
+        "name": "Downtown Los Angeles Clean Transit Hub",
+        "operator": "EVgo",
+        "level": "DC_FAST",
+        "power_kw": 350,
+        "ports_total": 12,
+        "ports_available": 6,
+        "connectors": ["CCS", "NACS"],
+        "address": "530 S Grand Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "pricing": "$0.44/kWh",
+        "renewable_pct": 91,
+        "amenities": ["Dining", "Museums", "Coffee"]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-117.1611, 32.7157] },
+      "properties": {
+        "id": "ev-sd-01",
+        "name": "San Diego Waterfront Clean Charging",
+        "operator": "Tesla Supercharger",
+        "level": "DC_FAST",
+        "power_kw": 250,
+        "ports_total": 20,
+        "ports_available": 13,
+        "connectors": ["NACS"],
+        "address": "1000 N Harbor Dr",
+        "city": "San Diego",
+        "state": "CA",
+        "pricing": "$0.36/kWh",
+        "renewable_pct": 93,
+        "amenities": ["Waterfront Walk", "Dining", "Restrooms"]
+      }
+    }
+  ]
+}
+
+;
