@@ -4,7 +4,7 @@
 **Project Name:** EcoRoute — Clean Energy & EV Grid Navigator  
 **Builder:** Farhan Mallik  
 **Role:** Full-Stack Developer & Cloud Systems Architect  
-**Live Demo:** `http://localhost:3000` (Local Dev) / AWS Amplify Deployment  
+**Live Demo:** `http://ecoroute-ev-map-356302822181.s3-website-us-east-1.amazonaws.com` (AWS S3 Hosted)  
 **Repository:** `https://github.com/farhanmallik05/ecoroute-ev-map`  
 
 ---
