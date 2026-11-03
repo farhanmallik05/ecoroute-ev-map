@@ -20,7 +20,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   if (!isOpen) return null;
 
   return (
-    <aside className="fixed top-20 right-4 z-40 w-80 p-5 rounded-3xl bg-slate-900/95 backdrop-blur-md border border-slate-800 shadow-2xl text-slate-100 animate-in slide-in-from-right-4 duration-200">
+    <aside className="fixed top-20 right-4 z-40 w-80 max-w-[calc(100vw-2rem)] max-h-[85vh] overflow-y-auto p-5 rounded-3xl bg-slate-900/95 backdrop-blur-md border border-slate-800 shadow-2xl text-slate-100 animate-in slide-in-from-right-4 duration-200">
       <div className="flex items-center justify-between pb-3 border-b border-slate-800">
         <div className="flex items-center gap-2">
           <SlidersHorizontal className="w-4 h-4 text-emerald-400" />

@@ -41,7 +41,7 @@ export const AppContent: React.FC = () => {
 
   // Fetch GeoJSON station data (with instant fallback to bundled stations)
   useEffect(() => {
-    fetch('/data/ev_stations.geojson')
+    fetch('./data/ev_stations.geojson')
       .then((res) => {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res.json();
@@ -129,7 +129,7 @@ export const AppContent: React.FC = () => {
 
       {/* Vehicle & Weather Temp Selector Drawer */}
       {isVehicleSelectorOpen && (
-        <div className="absolute top-20 right-4 z-40 w-80 animate-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-20 right-4 z-40 w-80 max-w-[calc(100vw-2rem)] animate-in slide-in-from-top-2 duration-200">
           <VehicleSelector
             selectedVehicle={selectedVehicle}
             onSelectVehicle={setSelectedVehicle}
